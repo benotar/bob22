@@ -34,10 +34,6 @@ namespace BotGiveInThe
 
             Console.WriteLine($"Start listening for @{me.Username}");
 
-            await Task.Delay(Timeout.Infinite);
-
-            cts.Cancel(); // Не закривайте токен, доки програма активна
-
             // Очікування завершення програми
             await Task.Delay(Timeout.Infinite);
         }
