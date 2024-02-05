@@ -15,19 +15,11 @@ namespace BotGiveInThe
     {
         private static async Task Main(string[] args)
         {
-            ConfigurationBuilder builder = new ConfigurationBuilder();
+           
 
-            builder.SetBasePath(Directory.GetCurrentDirectory());
+            var botClient = new TelegramBotClient("6745861939:AAFGKY6IS9nr-Z9nW6HX4HSaNu7hhK1RPsc");
 
-            builder.AddJsonFile("token.json");
-
-            IConfigurationRoot? config = builder.Build();
-
-            string? token = config.GetConnectionString("DefaultConnection");
-
-            //var botClient = new TelegramBotClient("6745861939:AAFGKY6IS9nr-Z9nW6HX4HSaNu7hhK1RPsc");
-
-            var botClient = new TelegramBotClient(token!);
+            //var botClient = new TelegramBotClient(token!);
 
             using CancellationTokenSource cts = new();
 
